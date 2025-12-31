@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>Sesi Forex WIB (UTC+7) — RAW vs CLEAN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root{
+  --bg:#0b0f14;
+  --panel:#121824;
+  --raw:#ffb020;
+  --clean:#22d3ee;
+  --asia:#38bdf8;
+  --london:#a78bfa;
+  --us:#fb7185;
+  --danger:#ef4444;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Arial}
+
+body{
+  margin:0;
+  background:radial-gradient(1200px 600px at top, #0e1524, var(--bg));
+  color:var(--text);
+  padding:28px;
+}
+
+h1{
+  text-align:center;
+  font-weight:700;
+  margin-bottom:30px;
+}
+
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:20px;
+}
+
+.session{
+  background:linear-gradient(180deg,#141b2e,#0f1422);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+.session h2{
+  margin:0 0 12px;
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.badge{
+  padding:4px 10px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.asia{color:var(--asia)}
+.london{color:var(--london)}
+.us{color:var(--us)}
+
+.badge.asia{background:rgba(56,189,248,.15)}
+.badge.london{background:rgba(167,139,250,.15)}
+.badge.us{background:rgba(251,113,133,.15)}
+
+.block{
+  margin-top:14px;
+  border-radius:14px;
+  padding:14px 16px;
+}
+
+.block.raw{
+  background:linear-gradient(180deg,rgba(255,176,32,.18),rgba(255,176,32,.05));
+  border:1px solid rgba(255,176,32,.35);
+}
+
+.block.clean{
+  background:linear-gradient(180deg,rgba(34,211,238,.18),rgba(34,211,238,.05));
+  border:1px solid rgba(34,211,238,.35);
+}
+
+.block h3{
+  margin:0;
+  font-size:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.time{
+  font-size:13px;
+  color:var(--muted);
+}
+
+.content{
+  margin-top:10px;
+  display:block; /* DEFAULT TERBUKA */
+  font-size:14px;
+  line-height:1.55;
+}
+
+ul{margin:8px 0 0 18px;padding:0}
+li{margin-bottom:6px}
+
+.function{
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:12px;
+  background:rgba(255,255,255,.04);
+  font-size:14px;
+}
+
+.avoid{
+  max-width:1100px;
+  margin:40px auto 0;
+  background:linear-gradient(180deg,#1a0f15,#120a0f);
+  border:1px solid rgba(239,68,68,.45);
+  border-radius:18px;
+  padding:20px;
+}
+
+.avoid h2{
+  margin-top:0;
+  color:var(--danger);
+}
+
+.avoid table{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:10px;
+}
+
+.avoid th,.avoid td{
+  padding:10px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  font-size:14px;
+}
+
+.footer{
+  text-align:center;
+  margin-top:30px;
+  font-size:12px;
+  color:var(--muted);
+}
+</style>
+</head>
+
+<body>
+
+<h1>⏱️ Sesi Forex — WIB (UTC+7)</h1>
+
+<div class="wrapper">
+
+  <!-- ASIA -->
+  <div class="session">
+    <h2 class="asia">🌏 ASIA <span class="badge asia">Tokyo</span></h2>
+
+    <div class="block raw">
+      <h3>🔸 RAW ASIA <span class="time">07:00 – 09:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>Market baru bangun</li>
+          <li>Spread mulai normal</li>
+          <li>Harga masih reaksi sisa US</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block clean">
+      <h3>🔹 CLEAN ASIA <span class="time">09:00 – 14:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>Range mulai stabil</li>
+          <li>Asia High / Low terbentuk</li>
+          <li>Noise rendah, struktur rapi</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="function">
+      👉 <strong>Fungsi:</strong> Build liquidity & range harian
+    </div>
+  </div>
+
+  <!-- LONDON -->
+  <div class="session">
+    <h2 class="london">🇬🇧 LONDON <span class="badge london">UK</span></h2>
+
+    <div class="block raw">
+      <h3>🔸 RAW LONDON <span class="time">15:00 – 16:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>Lonjakan volume awal</li>
+          <li>Sweep Asia High / Low</li>
+          <li>Fake break sering muncul</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block clean">
+      <h3>🔹 CLEAN LONDON <span class="time">16:00 – 19:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>Arah dominan terlihat</li>
+          <li>Breakout lebih valid</li>
+          <li>EMA accelerating</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="function">
+      👉 <strong>Fungsi:</strong> Menentukan arah utama hari
+    </div>
+  </div>
+
+  <!-- US -->
+  <div class="session">
+    <h2 class="us">🇺🇸 US / NEW YORK <span class="badge us">NY</span></h2>
+
+    <div class="block raw">
+      <h3>🔸 RAW US <span class="time">20:00 – 21:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>News & spike</li>
+          <li>Reaksi ke move London</li>
+          <li>Volatil tapi kasar</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="block clean">
+      <h3>🔹 CLEAN US <span class="time">23:00 – 04:00</span></h3>
+      <div class="content">
+        <ul>
+          <li>Distribusi harga</li>
+          <li>Continuation atau reversal</li>
+          <li>Daily close terbentuk</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="function">
+      👉 <strong>Fungsi:</strong> Validasi atau pembalikan arah
+    </div>
+  </div>
+
+</div>
+
+<div class="avoid">
+  <h2>🚫 ZONA TRANSISI (AVOID)</h2>
+  <table>
+    <tr><th>Jam WIB</th><th>Transisi</th></tr>
+    <tr><td>14:00 – 15:00</td><td>Asia → London</td></tr>
+    <tr><td>19:00 – 20:00</td><td>London → US</td></tr>
+    <tr><td>21:00 – 23:00</td><td>US Open → Stabil</td></tr>
+  </table>
+  <ul>
+    <li>❌ Struktur tidak konsisten</li>
+    <li>❌ EMA sering flip</li>
+    <li>❌ Candle manipulatif</li>
+  </ul>
+</div>
+
+<div class="footer">
+  RAW = discovery & sweep • CLEAN = struktur valid • WIB (UTC+7)
+</div>
+
+</body>
+</html>
